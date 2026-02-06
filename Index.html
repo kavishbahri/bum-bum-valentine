@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bum Bum ❤️</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+      max-width: 350px;
+    }
+
+    h1 {
+      color: #ff2e63;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 25px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .yes {
+      background-color: #ff2e63;
+      color: white;
+    }
+
+    .no {
+      background-color: #ddd;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Bum Bum 💕</h1>
+    <p>Will you be my Valentine, bum bum? 💖</p>
+
+    <button class="yes" onclick="yesClicked()">Yes 💘</button>
+    <button class="no" onmouseover="moveNo()">No 🙃</button>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          font-family:Arial;
+          background:linear-gradient(135deg,#ff758c,#ff7eb3);
+          text-align:center;
+          color:white;
+          padding:20px;
+        ">
+          <div>
+            <h1>YAYYYYY 💞</h1>
+            <p style="font-size:20px;">
+              You just made me the happiest person ❤️<br>
+              Valentine’s Day is officially ours now 😌
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    function moveNo() {
+      const noBtn = document.querySelector('.no');
+      noBtn.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+      noBtn.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+    }
+  </script>
+
+</body>
+</html>
